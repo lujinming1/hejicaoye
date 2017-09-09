@@ -7,9 +7,9 @@ import {
 import createBrowserHistory from 'history/createBrowserHistory';
 import './App.css';
 
-import Topwapper from './component/nav/Topwapper.js';
-
-
+import TopWrapper from './component/nav/TopWrapper.js';
+import FooterWrapper from './component/nav/FooterWrapper.js';
+import img from './static/image/home1.jpg';
 
 
 const history = createBrowserHistory();
@@ -19,8 +19,9 @@ class App extends Component {
       <div className="App">
         <Router history={history}>
           <div className='router-div'>
-            <Topwapper />
-            
+            <TopWrapper />
+            <img src={img} />
+            <FooterWrapper />
           </div>
         </Router>
       </div>

@@ -1,0 +1,72 @@
+.footerWrapper {
+  width:100%;
+  background: #ecf0f1;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+.footer {
+  margin: auto;
+  width: 71%;
+  padding-top: 45px;
+
+
+}
+.footer > div {
+  vertical-align: top;
+  display: inline-block;
+
+}
+.footer .footerqrcode{
+  margin-bottom: 60px;
+  width: 12%;
+}
+
+
+
+.footer .qrcode{
+  width: 100%;
+
+}
+
+.footer .nav {
+  color:#333;
+  width: 88%;
+  margin-left: auto;
+}
+
+.footer .link {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer .menu > li {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+.footer .link{
+
+  text-decoration: none;
+}
+.footer .submenu{
+  padding-left: 0;
+}
+
+.footer span {
+  font-weight: bold;
+}
+
+.footer .copyright{
+  color: #333;
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  padding: 20px 0px;
+}
