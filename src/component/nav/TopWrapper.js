@@ -7,7 +7,7 @@ class TopWrapper extends Component {
   constructor(props){
     super(props);
     this.state = {
-      emobileStyle: {display: 'none'},
+      mobileStyle: {display: 'none'},
       menuStyle: { display: 'block'}
     }
     this.handleWidth = this.handleWidth.bind(this);
@@ -44,11 +44,12 @@ class TopWrapper extends Component {
   }
 
   componentDidMount(){
-    if(window.innerWidth < 800){
+    if(window.innerWidth < 700){
         this.setState({
           mobileStyle: { display: 'block'},
           menuStyle: {display: 'none'}
-        })
+        });
+
     }else{
       this.setState({
         mobileStyle: { display: 'none'},
@@ -63,17 +64,17 @@ class TopWrapper extends Component {
 
 
     return (
-      <div className='head_wrap head_wrap_expand'>
+      <div className='head_wrap head_wrap_expand'ref={(input)=>{this.head_wrap = input}}>
         <div className='head_bgcolor'></div>
         <div className='head'>
-          <div className='head_con'>
+          <div className='head_con' >
             <Link className='link' to='/'><h1 className='logo'>禾吉草业</h1></Link>
             <div className='head_Mobile' style={this.state.mobileStyle} onClick={this.handleClick}></div>
             <ul className='menu_list' style={this.state.menuStyle}>
-              <li className='li'><Link className='link' to='/'>公司消息</Link></li>
-              <li className='li'><Link className='link' to='/'>产品展示</Link></li>
-              <li className='li'><Link className='link' to='/'>联系我们</Link></li>
-              <li className='li'><Link className='link' to='/'>网站管理</Link></li>
+              <li className='li'><Link className='link' to='/CompanyInfo'>公司消息</Link></li>
+              <li className='li'><Link className='link' to='/Produce'>产品展示</Link></li>
+              <li className='li'><Link className='link' to='/Ours'>联系我们</Link></li>
+              <li className='li'><Link className='link' to='/Admin'>网站管理</Link></li>
             </ul>
           </div>
         </div>

@@ -9,7 +9,8 @@ import './App.css';
 
 import TopWrapper from './component/nav/TopWrapper.js';
 import FooterWrapper from './component/nav/FooterWrapper.js';
-import img from './static/image/home1.jpg';
+import BasicRouterList from './router/BasicRouterList';
+
 
 
 const history = createBrowserHistory();
@@ -18,9 +19,9 @@ class App extends Component {
     return (
       <div className="App">
         <Router history={history}>
-          <div className='router-div'>
+          <div className='router_div'>
             <TopWrapper />
-            <img src={img} />
+              <BasicRouterList />
             <FooterWrapper />
           </div>
         </Router>
