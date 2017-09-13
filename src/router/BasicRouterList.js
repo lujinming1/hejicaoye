@@ -7,15 +7,16 @@ import {
 } from 'react-router-dom';
 
 import Home from '../component/page/Home';
-import Produce from '../component/page/Produce';
-import Ours from '../component/page/Ours';
-import CompanyInfo from '../component/page/CompanyInfo';
+import Produce from '../component/page/produce/Produce';
+import Ours from '../component/page/contant/Contant';
+import CompanyInfo from '../component/page/company/CompanyInfo';
 import Admin from '../admin/Admin';
+
 import ErrorPage from '../component/page/ErrorPage.js';
 class BasicRouterList extends Component{
   render() {
     return(
-      <div>
+      <div style={{height:'100%'}}>
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/Produce' component={Produce} />

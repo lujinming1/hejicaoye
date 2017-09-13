@@ -5,26 +5,27 @@ import {
   Link
 } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
+import {Provider} from 'react-redux';
+import store from './redux/store/configureStore';
 import './App.css';
-
-import TopWrapper from './component/nav/TopWrapper.js';
-import FooterWrapper from './component/nav/FooterWrapper.js';
 import BasicRouterList from './router/BasicRouterList';
-
-
+import Main from './main';
 
 const history = createBrowserHistory();
+
 class App extends Component {
+
   render() {
     return (
       <div className="App">
-        <Router history={history}>
-          <div className='router_div'>
-            <TopWrapper />
+        <Provider store = {store} >
+          <Router history={history}>
+            <div style={{height:'100%'}}>
               <BasicRouterList />
-            <FooterWrapper />
-          </div>
-        </Router>
+              <Main />
+            </div>
+          </Router>
+        </Provider>
       </div>
     );
   }

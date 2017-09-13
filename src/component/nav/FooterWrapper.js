@@ -1,15 +1,36 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import footlogo from '../../static/image/footlogo.png';
 import '../../style/component/nav/footerwrapper.css';
 class FooterWrapper extends Component{
+  constructor(props){
+    super(props);
+  }
 
+  componentDidMount(){
+    const {isSmall} = this.props;
+    if(isSmall){
+          this.mobileStyle.style.display = 'none';
+    }else{
+      this.mobileStyle.style.display = 'block';
+    }
+  }
+
+  shouldComponentUpdate(nextProps,nextState){
+    if(nextProps.isSmall){
+      this.mobileStyle.style.display = 'none';
+    } else {
+      this.mobileStyle.style.display = 'block';
+    }
+    return true;
+  }
   render(){
     return(
       <div className="footerWrapper">
         <div className="footer">
 
-          <div className="footerqrcode">
+          <div className="footerqrcode" ref={elem => {this.mobileStyle = elem}}>
             <img src={footlogo} className="qrcode" alt="qr_code"/>
           </div>
           <hr />
@@ -24,5 +45,7 @@ class FooterWrapper extends Component{
     );
   }
 }
-
+FooterWrapper.propTypes = {
+  isSmall:PropTypes.bool.isRequired
+}
 export default FooterWrapper;

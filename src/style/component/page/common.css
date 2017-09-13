@@ -4,13 +4,18 @@
 }
 .main {
 	width:100%;
-	margin:99px auto 70px;
-	overflow:hidden
+	height: 100%;
+	margin-top:99px;
+	padding-bottom: 195px;
 }
 .article_content {
 	width:65%;
+	height: auto;
+	min-height: 100%;
+	_height: 100%;
 	float: right;
 	margin-right: 15%;
+
 	display:inline
 }
 .sub_sidebar {
@@ -51,5 +56,5 @@
 	color:#0457b7
 }
 .mobile_page{
-	display: none;
+	display: block;
 }

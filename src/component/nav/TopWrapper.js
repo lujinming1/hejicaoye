@@ -1,63 +1,49 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 import '../../style/component/nav/topwrapper.css';
 
 class TopWrapper extends Component {
   constructor(props){
     super(props);
-    this.state = {
-      mobileStyle: {display: 'none'},
-      menuStyle: { display: 'block'}
-    }
-    this.handleWidth = this.handleWidth.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleWidth(){
-    if(window.innerWidth < 700){
-        this.setState({
-          mobileStyle: { display: 'block'},
-          menuStyle: {display: 'none'}
-        })
-    } else {
-      this.setState({
-        mobileStyle: { display: 'none'},
-        menuStyle: {display: 'flex'}
-      })
-    }
-  }
   handleClick(){
-    if(this.state.menuStyle['display'] == 'none'){
-      this.setState({
-        menuStyle:{
-          display: 'block',
-          top: '70px',
-          background: '#008000'
-        }
-      });
-    } else {
-      this.setState({
-        menuStyle: {display: 'none'}
-      })
+    if(this.props.isSmall){
+      if(this.menuStyle.style['display'] === 'none'){
+        this.menuStyle.style['display'] = 'block';
+        this.menuStyle.style['top'] = '70px';
+        this.menuStyle.style['background'] = '#008000';
+      } else {
+        this.menuStyle.style['display'] = 'none';
+
+      }
+
     }
   }
 
   componentDidMount(){
-    if(window.innerWidth < 700){
-        this.setState({
-          mobileStyle: { display: 'block'},
-          menuStyle: {display: 'none'}
-        });
-
+    const {isSmall} = this.props;
+    if(isSmall){
+          this.mobileStyle.style.display = 'block';
+          this.menuStyle.style.display = 'none';
     }else{
-      this.setState({
-        mobileStyle: { display: 'none'},
-        menuStyle: {display: 'flex'}
-      })
+      this.mobileStyle.style.display = 'none';
+      this.menuStyle.style.display = 'flex';
     }
-    window.addEventListener('resize',this.handleWidth);
+  }
 
+  shouldComponentUpdate(nextProps,nextState){
+    if(nextProps.isSmall){
+      this.mobileStyle.style.display = 'block';
+      this.menuStyle.style.display = 'none';
+    } else {
+      this.mobileStyle.style.display = 'none';
+      this.menuStyle.style.display = 'flex';
+    }
+    return true;
   }
 
   render(){
@@ -69,8 +55,8 @@ class TopWrapper extends Component {
         <div className='head'>
           <div className='head_con' >
             <Link className='link' to='/'><h1 className='logo'>禾吉草业</h1></Link>
-            <div className='head_Mobile' style={this.state.mobileStyle} onClick={this.handleClick}></div>
-            <ul className='menu_list' style={this.state.menuStyle}>
+            <div className='head_Mobile' ref={(elem) => {this.mobileStyle = elem}} onClick={this.handleClick}></div>
+            <ul className='menu_list' ref={(elem) => {this.menuStyle = elem}} onClick={this.handleClick}>
               <li className='li'><Link className='link' to='/CompanyInfo'>公司消息</Link></li>
               <li className='li'><Link className='link' to='/Produce'>产品展示</Link></li>
               <li className='li'><Link className='link' to='/Ours'>联系我们</Link></li>
@@ -82,5 +68,7 @@ class TopWrapper extends Component {
     );
   }
 }
-
+TopWrapper.propTypes = {
+  isSmall:PropTypes.bool.isRequired
+}
 export default TopWrapper;

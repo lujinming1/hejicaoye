@@ -4,8 +4,18 @@ import {
        Route,
        Link
      } from 'react-router-dom';
-
-class Admin extends Component{
+import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
+import {ToAdmin} from '../redux/action/adminAction'
+class AdminPage extends Component{
+  componentDidMount(){
+    const {dispatch, toAdmin} = this.props;
+    dispatch(ToAdmin(true));
+  }
+  componentWillUnmount(){
+    const {dispatch, toAdmin} = this.props;
+    dispatch(ToAdmin(false));
+  }
   render(){
     return (
       <div>
@@ -14,4 +24,16 @@ class Admin extends Component{
     );
   }
 }
+
+AdminPage.propTypes = {
+  toAdmin: PropTypes.bool.isRequired
+}
+
+function mapStateToProps(state, ownProps){
+  const {toAdmin} = state;
+  return {
+    toAdmin
+  }
+}
+const Admin = connect(mapStateToProps)(AdminPage);
 export default Admin;

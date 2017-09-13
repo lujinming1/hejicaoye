@@ -8,8 +8,8 @@ import img from '../../static/image/home1.jpg';
 class Home extends Component{
   render(){
     return (
-      <div>
-        <img src={img}/>
+      <div style={{height:'100%'}}>
+        <img style={{width: '100%',height:'100%'}} src={img}/>
       </div>
     );
   }
