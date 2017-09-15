@@ -7,6 +7,8 @@ import {
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {ToAdmin} from '../redux/action/adminAction'
+import Layout from './component/layout/layout';
+
 class AdminPage extends Component{
   componentDidMount(){
     const {dispatch, toAdmin} = this.props;
@@ -17,11 +19,7 @@ class AdminPage extends Component{
     dispatch(ToAdmin(false));
   }
   render(){
-    return (
-      <div>
-        Admin
-      </div>
-    );
+    return <Layout />
   }
 }
 

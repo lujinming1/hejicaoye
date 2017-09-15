@@ -65,7 +65,6 @@ fieldset,iframe,img {
 }
 img {
 	display:inline-block;
-	vertical-align:bottom;
 	-ms-interpolation-mode:bicubic
 }
 ol,ul {
