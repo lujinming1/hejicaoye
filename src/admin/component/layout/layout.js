@@ -13,7 +13,7 @@ import { Lfooter } from './lfooter';
 
 // 布局样式
 import './style/layout.css';
-import logoImg from '../../../static/image/favicon.ico';
+import logoImage from '../../../static/image/favicon.ico'
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 const { Content, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
@@ -58,7 +58,7 @@ class Main extends Component {
 	        <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
 		        <div className="layout-logo">
 		        	<Link to="/home">
-			        	<img className="logo-img" src={logoImg} />
+			        	<img className="logo-img" src={logoImage} />
 			        	<span className="logo-text">{Config.logoText}</span>
 		        	</Link>
 		        </div>

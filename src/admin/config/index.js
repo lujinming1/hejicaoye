@@ -3,7 +3,7 @@ const Main = {
     name: '禾吉草业',
     prefix: 'Admin',
     footerText: '版权公告 ©2017 甘肃禾吉草业有限公司 版权所有。',
-    logoSrc: '../../static/image/favicon.ico',
+    logoSrc: 'https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg',
     logoText: '禾吉草业',
     needLogin: true,
 	message: { // 提示信息
