@@ -1,4 +1,4 @@
-var xhr = new XMLHttpRequest();
+var xhr = xhr = new XMLHttpRequest();
 console.log(xhr);
 xhr.onreadystatechange = function(){
   console.log(xhr.readyState);

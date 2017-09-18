@@ -6,7 +6,8 @@ import { Message } from 'antd';
 import { browserHistory } from 'react-router';
 import { RES_LOGIN, INITIAL_STATE } from '../../constants/loginTypes';
 import LoginService from '../../../services/loginService';
-import { loading } from '../index';
+import { loading } from '../loadingAction';
+import Config from '../../../config/index'
 
 /**
  * 登录成功

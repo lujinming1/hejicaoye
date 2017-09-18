@@ -1,0 +1,65 @@
+.login-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../../../../static/image/home1.jpg) no-repeat center center;
+    background-size: cover;
+}
+.login-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -160px 0 0 -160px;
+    width: 320px;
+    height: 320px;
+    padding: 36px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, .08);
+    background-color: #fff;
+    border-radius: 4px;
+
+}
+.login-form Input{
+  width: 215px;
+  height: 18px;
+}
+
+.login-form button {
+    width: 201px;
+    height: 30px;
+}
+.login-form .login-account {
+    color: #999;
+    text-align: center;
+    margin-top: 16px;
+
+}
+.login-form .login-account span {
+    &:first-child {
+        margin-right: 16px;
+    }
+}
+
+.login-logo {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    margin-bottom: 24px;
+
+}
+.login-logo img {
+    width: 70px;
+    height: 40px;
+    margin-right: 8px;
+}
+.login-logo span {
+    vertical-align: text-bottom;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.ant-spin-container,
+.ant-spin-nested-loading {
+    height: 100%;
+}

@@ -48,9 +48,9 @@ class CompanyPage extends Component{
             <div className='cover_layer'></div>
             <ul className="sub_sidebar_list" >
               <li className='current'onClick={this.handleClick} ref={(input) => {this.init = input}}>
-                <Link className='link' to={`${this.props.match.url}/ComBrief`}>公司简介</Link>
+                <Link className='link' to={`${this.props.match.url}/comBrief`}>公司简介</Link>
               </li>
-              <li onClick={this.handleClick}><Link className='link' to={`${this.props.match.url}/ComNews`}>新闻资讯</Link></li>
+              <li onClick={this.handleClick}><Link className='link' to={`${this.props.match.url}/comNews`}>新闻资讯</Link></li>
             </ul>
           </div>
           <div className="article_content">

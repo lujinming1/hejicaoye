@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { is, fromJS } from 'immutable';
 
-import Config from '../../config/index';
+import Config from '../../../config/index';
 
 import { Layout } from 'antd';
 const { Footer } = Layout;

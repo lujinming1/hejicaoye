@@ -8,7 +8,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {ToAdmin} from '../redux/action/adminAction'
 import Layout from './component/layout/layout';
-
+import Login from './containers/login/login';
 class AdminPage extends Component{
   componentDidMount(){
     const {dispatch, toAdmin} = this.props;
@@ -19,7 +19,19 @@ class AdminPage extends Component{
     dispatch(ToAdmin(false));
   }
   render(){
-    return <Layout />
+    const t = false;
+    return (
+      <div>
+      { t &&
+      <Layout />
+    }
+    {!t &&
+      <Login />
+
+    }
+    </div>
+
+    )
   }
 }
 

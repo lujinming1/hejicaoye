@@ -3,7 +3,7 @@ import {PropType} from 'prop-types';
 import { History, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { is, fromJS } from 'immutable';
-import Config from '../../config/index';
+import Config from '../../../config/index';
 // 公共头部
 import { Lheader } from './lheader';
 // 公共菜单
@@ -57,7 +57,7 @@ class Main extends Component {
 		<Layout className="layout">
 	        <Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
 		        <div className="layout-logo">
-		        	<Link to="/home">
+		        	<Link to="/admin/home">
 			        	<img className="logo-img" src={logoImage} />
 			        	<span className="logo-text">{Config.logoText}</span>
 		        	</Link>

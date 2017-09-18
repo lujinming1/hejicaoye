@@ -19,10 +19,10 @@ class BasicRouterList extends Component{
       <div style={{height:'100%'}}>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/Produce' component={Produce} />
-          <Route path='/Ours' component={Ours} />
-          <Route path='/CompanyInfo' component={CompanyInfo} />
-          <Route path='/Admin' component={Admin} />
+          <Route path='/produce' component={Produce} />
+          <Route path='/ours' component={Ours} />
+          <Route path='/companyInfo' component={CompanyInfo} />
+          <Route path='/admin' component={Admin} />
           <Route component={ErrorPage} />
         </Switch>
       </div>

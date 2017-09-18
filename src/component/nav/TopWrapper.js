@@ -57,10 +57,10 @@ class TopWrapper extends Component {
             <Link className='link' to='/'><h1 className='logo'>禾吉草业</h1></Link>
             <div className='head_Mobile' ref={(elem) => {this.mobileStyle = elem}} onClick={this.handleClick}></div>
             <ul className='menu_list' ref={(elem) => {this.menuStyle = elem}} onClick={this.handleClick}>
-              <li className='li'><Link className='link' to='/CompanyInfo'>公司消息</Link></li>
-              <li className='li'><Link className='link' to='/Produce'>产品展示</Link></li>
-              <li className='li'><Link className='link' to='/Ours'>联系我们</Link></li>
-              <li className='li'><Link className='link' to='/Admin'>网站管理</Link></li>
+              <li className='li'><Link className='link' to='/companyInfo'>公司资讯</Link></li>
+              <li className='li'><Link className='link' to='/produce'>产品展示</Link></li>
+              <li className='li'><Link className='link' to='/ours'>联系我们</Link></li>
+              <li className='li'><Link className='link' to='/admin'>网站管理</Link></li>
             </ul>
           </div>
         </div>

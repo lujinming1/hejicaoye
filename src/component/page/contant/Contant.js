@@ -48,9 +48,9 @@ class ContantPage extends Component{
             <div className='cover_layer'></div>
             <ul className="sub_sidebar_list" >
               <li className='current'onClick={this.handleClick} ref={(input) => {this.init = input}}>
-                <Link className='link' to={`${this.props.match.url}/About`}>关于我们</Link>
+                <Link className='link' to={`${this.props.match.url}/about`}>关于我们</Link>
               </li>
-              <li onClick={this.handleClick}><Link className='link' to={`${this.props.match.url}/Job`}>加入我们</Link></li>
+              <li onClick={this.handleClick}><Link className='link' to={`${this.props.match.url}/job`}>加入我们</Link></li>
             </ul>
           </div>
           <div className="article_content">

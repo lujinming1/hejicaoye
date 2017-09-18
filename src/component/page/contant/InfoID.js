@@ -10,9 +10,9 @@ import ErrorPage from '../ErrorPage.js';
 class InfoID extends Component{
 
   render(){
-    if(this.props.match.params.infoID == 'About'){
+    if(this.props.match.params.infoID == 'about'){
       return <About />;
-    } else if(this.props.match.params.infoID == 'Job'){
+    } else if(this.props.match.params.infoID == 'job'){
       return <Job />;
     } else {
       return <ErrorPage />
